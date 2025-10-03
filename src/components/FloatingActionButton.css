@@ -43,11 +43,7 @@
 
 /* Remove the old expanded state since we have animation now */
 
-.fab-sparkles {
-  color: white;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
+.fab-sparkles { color: #fff; width: 16px; height: 16px; transition: all 0.3s ease; }
 
 .fab-chevron {
   color: white;
@@ -148,9 +144,7 @@
   font-size: 16px;
 }
 
-.fab-overlay-sparkles {
-  font-size: 18px;
-}
+.fab-overlay-sparkles { color: #fff; width: 18px; height: 18px; }
 
 .fab-overlay-close {
   background: none;
