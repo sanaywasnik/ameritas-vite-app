@@ -8,7 +8,7 @@ import MemberSearch from './pages/MemberSearch';
 function App() {
   return (
     <ConfigProvider theme={themeConfig}>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="App">
           <Routes>
             <Route path="/" element={<MemberSearch />} />
