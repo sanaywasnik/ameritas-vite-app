@@ -7,8 +7,7 @@ import PatientHistory from './PatientHistory';
 import BillingPayment from './BillingPayment';
 import CoverageHistory from './CoverageHistory';
 import CaseHistory from './CaseHistory';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+import { Icons } from './Icons';
 import './MemberDashboard.css';
 
 const { Option } = Select;
@@ -243,7 +242,7 @@ const MemberDashboard = ({ member, activePersonKey }) => {
           <div className="md-filters">
             <Select
               className="filter-select attach-bottom"
-              suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[coverageOpen ? 'chevron-up' : 'chevron-down']} />}
+              suffixIcon={coverageOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
               onDropdownVisibleChange={(o) => setCoverageOpen(o)}
               style={{ width: 240 }}
               value={selectedCoverage}
@@ -263,7 +262,7 @@ const MemberDashboard = ({ member, activePersonKey }) => {
             </Select>
             <Select
               className="filter-select attach-bottom"
-              suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[memberOpen ? 'chevron-up' : 'chevron-down']} />}
+              suffixIcon={memberOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
               onDropdownVisibleChange={(o) => setMemberOpen(o)}
               style={{ width: 240 }}
               value={selectedPerson}

@@ -6,9 +6,6 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-debug.log*
 
-# Secrets
-.npmrc
-
 # Logs
 logs
 *.log

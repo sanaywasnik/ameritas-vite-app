@@ -1,13 +1,12 @@
 import React from 'react';
 import { Tooltip, Modal, Table } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+import { Icons } from './Icons';
 import './LeftRail.css';
 
 const LeftRail = ({ household, allMembers }) => {
   const items = [
-    { key: 'call', label: 'Call', icon: byPrefixAndName.fas['phone'] },
-    { key: 'email', label: 'Email', icon: byPrefixAndName.far['envelope'] },
+    { key: 'call', label: 'Call', icon: 'phone' },
+    { key: 'email', label: 'Email', icon: 'envelope' },
   ];
 
   const columns = [
@@ -40,14 +39,14 @@ const LeftRail = ({ household, allMembers }) => {
       {items.map((item) => (
         <Tooltip title={item.label} placement="right" key={item.key}>
           <button className="rail-item" aria-label={item.label}>
-            <FontAwesomeIcon icon={item.icon} className="rail-icon" />
+            {item.icon === 'phone' ? <Icons.Phone className="rail-icon" /> : <Icons.Envelope className="rail-icon" />}
             <span className="rail-label">{item.label}</span>
           </button>
         </Tooltip>
       ))}
 
       <button className="rail-item" aria-label="Members" onClick={() => setOpen(true)}>
-        <FontAwesomeIcon icon={byPrefixAndName.fas['users']} className="rail-icon" />
+        <Icons.Users className="rail-icon" />
         <span className="rail-label">Members</span>
       </button>
       <Modal open={open} onCancel={() => setOpen(false)} footer={null} width={1200} title="Test Data - Subscribers & Dependents">

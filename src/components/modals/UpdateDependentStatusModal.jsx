@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, DatePicker, message } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './UpdateDependentStatusModal.css';
 
 const { Option } = Select;
@@ -50,7 +50,7 @@ const UpdateDependentStatusModal = ({ open, onClose, member, activePersonKey }) 
     >
       <Form form={form} layout="vertical" requiredMark={false} onFinish={handleFinish}>
         <Form.Item label="Member Details" name="memberDetails">
-          <Select placeholder="Select member" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select member" suffixIcon={<Icons.ChevronDown />}>
             {memberOptions.map(option => (
               <Option key={option.value} value={option.value}>
                 {option.label}
@@ -62,20 +62,20 @@ const UpdateDependentStatusModal = ({ open, onClose, member, activePersonKey }) 
         <Form.Item label="Date of Birth" name="dateOfBirth">
           <DatePicker 
             placeholder="Select date" 
-            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.far['calendar']} />}
+            suffixIcon={<Icons.Calendar />}
             style={{ width: '100%' }}
           />
         </Form.Item>
 
         <Form.Item label="Share Information" name="shareInformation">
-          <Select placeholder="Select option" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select option" suffixIcon={<Icons.ChevronDown />}>
             <Option value="yes">Yes</Option>
             <Option value="no">No</Option>
           </Select>
         </Form.Item>
 
         <Form.Item label="Student" name="student">
-          <Select placeholder="Select option" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select option" suffixIcon={<Icons.ChevronDown />}>
             <Option value="yes">Yes</Option>
             <Option value="no">No</Option>
           </Select>

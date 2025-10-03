@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Input, Table, message } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './ClaimDetailsModal.css';
 
 const { TextArea } = Input;
@@ -99,7 +99,7 @@ const ClaimDetailsModal = ({ open, onClose, claimId }) => {
           <div className="documents-list">
             {claimDocuments.map((doc, index) => (
               <div key={index} className="document-link">
-                <FontAwesomeIcon icon={byPrefixAndName.far['file-pdf']} className="document-icon" />
+                <Icons.FilePdf className="document-icon" />
                 <div className="document-info">
                   <div className="document-name">{doc.name}</div>
                   <div className="document-date">Uploaded: {doc.uploadDate}</div>

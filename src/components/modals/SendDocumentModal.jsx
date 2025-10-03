@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Checkbox, message } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './SendDocumentModal.css';
 
 const { Option } = Select;
@@ -34,7 +34,7 @@ const SendDocumentModal = ({ open, onClose, member, activePersonKey }) => {
         <Form.Item label="Product" name="product">
           <Select 
             placeholder="Select product" 
-            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}
+            suffixIcon={<Icons.ChevronDown />}
             defaultValue="hippa-auth"
           >
             <Option value="hippa-auth">HIPPA Authorization Form</Option>

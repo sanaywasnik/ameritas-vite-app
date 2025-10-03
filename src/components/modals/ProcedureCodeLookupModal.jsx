@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Input, Button, Table, Space, Tag, message, Divider } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './ProcedureCodeLookupModal.css';
 
 const ProcedureCodeLookupModal = ({ open, onClose, member, activePersonKey }) => {

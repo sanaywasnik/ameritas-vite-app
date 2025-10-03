@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Input, message } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './SendBenefitSummaryModal.css';
 
 const { Option } = Select;
@@ -56,7 +56,7 @@ const SendBenefitSummaryModal = ({ open, onClose, member, activePersonKey }) => 
     >
       <Form form={form} layout="vertical" requiredMark={false} onFinish={handleFinish}>
         <Form.Item label="Member Details" name="memberDetails">
-          <Select placeholder="Select member" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select member" suffixIcon={<Icons.ChevronDown />}>
             {memberOptions.map(option => (
               <Option key={option.value} value={option.value}>
                 {option.label}
@@ -66,7 +66,7 @@ const SendBenefitSummaryModal = ({ open, onClose, member, activePersonKey }) => 
         </Form.Item>
 
         <Form.Item label="Coverage Type" name="coverageType">
-          <Select placeholder="Select coverage type" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select coverage type" suffixIcon={<Icons.ChevronDown />}>
             <Option value="dental">Dental</Option>
             <Option value="vision">Vision</Option>
             <Option value="hearing">Hearing</Option>
@@ -76,7 +76,7 @@ const SendBenefitSummaryModal = ({ open, onClose, member, activePersonKey }) => 
         </Form.Item>
 
         <Form.Item label="Delivery Method" name="deliveryMethod">
-          <Select placeholder="Select delivery method" suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['chevron-down']} />}>
+          <Select placeholder="Select delivery method" suffixIcon={<Icons.ChevronDown />}>
             <Option value="email">Email</Option>
             <Option value="mail">Mail</Option>
             <Option value="both">Both Email and Mail</Option>

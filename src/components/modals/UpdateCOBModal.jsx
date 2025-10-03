@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Input, DatePicker, message } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+
+import { Icons } from '../Icons';
 import './UpdateCOBModal.css';
 
 const { Option } = Select;
@@ -61,7 +61,7 @@ const UpdateCOBModal = ({ open, onClose, member, activePersonKey }) => {
           <DatePicker 
             placeholder="Select date" 
             style={{ width: '100%' }}
-            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['calendar']} />}
+            suffixIcon={<Icons.CalendarSolid />}
           />
         </Form.Item>
 
@@ -69,7 +69,7 @@ const UpdateCOBModal = ({ open, onClose, member, activePersonKey }) => {
           <DatePicker 
             placeholder="Select date" 
             style={{ width: '100%' }}
-            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas['calendar']} />}
+            suffixIcon={<Icons.CalendarSolid />}
           />
         </Form.Item>
       </Form>
