@@ -243,7 +243,7 @@ const MemberDashboard = ({ member, activePersonKey }) => {
             <Select
               className="filter-select attach-bottom"
               suffixIcon={coverageOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onDropdownVisibleChange={(o) => setCoverageOpen(o)}
+              onOpenChange={(o) => setCoverageOpen(o)}
               style={{ width: 240 }}
               value={selectedCoverage}
               placeholder="Coverage type"
@@ -263,7 +263,7 @@ const MemberDashboard = ({ member, activePersonKey }) => {
             <Select
               className="filter-select attach-bottom"
               suffixIcon={memberOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onDropdownVisibleChange={(o) => setMemberOpen(o)}
+              onOpenChange={(o) => setMemberOpen(o)}
               style={{ width: 240 }}
               value={selectedPerson}
               placeholder="Member"

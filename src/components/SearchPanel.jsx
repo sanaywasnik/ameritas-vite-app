@@ -79,7 +79,7 @@ const SearchPanel = ({ onSearch, onCreateCase, onClear, coverage }) => {
               style={{ width: '100%' }}
               className="search-select"
               suffixIcon={isSearchByOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onDropdownVisibleChange={(open) => setIsSearchByOpen(open)}
+              onOpenChange={(open) => setIsSearchByOpen(open)}
             >
               <Option value="subscriberId">Subscriber ID</Option>
               <Option value="nameDob">First Name + Last Name + DOB</Option>

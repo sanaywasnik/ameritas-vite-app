@@ -37,6 +37,7 @@ const Icon = ({ component: Component, className, style, width, height, color, ..
     width: width || '1em',
     height: height || '1em',
     color: color || 'currentColor',
+    fill: 'currentColor',
     display: 'inline-block',
     verticalAlign: 'middle',
     ...style,
