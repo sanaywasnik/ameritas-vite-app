@@ -161,7 +161,7 @@ const SearchPanel = ({ onSearch, onCreateCase, onClear, coverage }) => {
 
           <Button
             type="primary"
-            icon={<Icons.MagnifyingGlass style={{ color: '#1677ff' }} />}
+            icon={<Icons.MagnifyingGlass />}
             block
             onClick={handleSearch}
           >
