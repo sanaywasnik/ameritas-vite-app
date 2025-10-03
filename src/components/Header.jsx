@@ -135,6 +135,8 @@ const Header = () => {
                   defaultValue="subscriber-member"
                   size="small"
                   style={{ minWidth: 180 }}
+                  suffixIcon={personaOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
+                  onOpenChange={(open) => setPersonaOpen(open)}
                 />
               </div>
             </div>
