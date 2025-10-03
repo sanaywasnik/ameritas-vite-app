@@ -1,0 +1,113 @@
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.search-card,
+.coverage-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Ensure Search card stays auto-height and does not stretch */
+.search-card { flex: 0 0 auto; }
+
+.card-padding { padding: 16px; }
+.card-padding-sm { padding: 4px 16px; }
+
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clear-button {
+  font-size: 0.875rem;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #1890ff;
+}
+
+.search-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #262626;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.5;
+}
+
+.member-type-radio {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.member-type-radio .ant-radio-wrapper {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #595959;
+}
+
+.search-select,
+.search-select .ant-select-selector {
+  font-size: 0.875rem;
+}
+
+/* Removed custom search button styles to use Ant Design defaults */
+
+.coverage-card { flex: 1 1 auto; }
+
+.coverage-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #262626;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.coverage-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.coverage-label {
+  /* Graph Subtitle */
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8c8c8c;
+  line-height: 1.5;
+}
+
+.coverage-value {
+  /* Body Text Small */
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.5;
+}
+
+/* Removed custom create case button styles to use Ant Design defaults */

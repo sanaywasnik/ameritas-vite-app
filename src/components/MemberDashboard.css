@@ -1,0 +1,129 @@
+.member-dashboard { display: flex; flex-direction: column; gap: 0; flex: 1; min-height: 0; height: 100%; width: 100%; min-width: 0; max-width: 100%; }
+.top-filters { display: flex; gap: 12px; }
+.filter-select .ant-select-selector { height: 40px; align-items: center; border: none !important; box-shadow: none !important; }
+.md-filters { display: flex; gap: 12px; margin-bottom: 0; padding: 0 16px; }
+.attach-bottom .ant-select-selector { border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; border-bottom: none !important; border-top-left-radius: 8px !important; border-top-right-radius: 8px !important; }
+
+.content-split { display: flex; gap: 12px; flex: 1; min-height: 0; max-width: 100%; width: 100%; }
+.left-stack { display: flex; flex-direction: column; gap: 0; flex: 1; min-width: 0; max-width: 100%; overflow: hidden; }
+.left-80 { flex: 1; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.left-80 .ant-card-body { display: flex; flex-direction: column; height: 100%; padding: 0; }
+.right-20 { flex: 0 0 280px; }
+.right-qa { width: 280px; flex: 0 0 280px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: flex; flex-direction: column; min-height: 0; }
+
+.dashboard-tabs .ant-tabs-tab { font-size: 0.875rem; }
+.tab-pad { padding: 16px; width: 100%; max-width: 100%; overflow: hidden; box-sizing: border-box; }
+.dashboard-tabs .ant-tabs-nav { margin: 0; padding: 0 16px; border-bottom: 1px solid #f0f0f0; }
+.dashboard-tabs { display: flex; flex-direction: column; height: 100%; width: 100%; }
+.dashboard-tabs .ant-tabs-nav { flex: 0 0 auto; }
+.dashboard-tabs .ant-tabs-content-holder { flex: 1 1 auto; min-height: 0; overflow: auto; width: 100%; }
+.dashboard-tabs .ant-tabs-content { padding: 0; height: auto; width: 100%; }
+.dashboard-tabs .ant-tabs-tabpane { width: 100%; max-width: 100%; overflow: hidden; }
+
+/* Disabled tabs styles */
+.dashboard-tabs.ant-tabs-disabled .ant-tabs-tab {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.dashboard-tabs.ant-tabs-disabled .ant-tabs-content {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Benefit Summary layout */
+.bs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 24px; }
+.bs-item { display: flex; flex-direction: column; gap: 4px; }
+.bs-label { font-size: 0.75rem; color: #8c8c8c; }
+.bs-value { font-size: 0.875rem; color: #262626; }
+.bold { font-weight: 700; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.bs-tables { width: 100%; }
+.bs-table { width: 100%; border-collapse: collapse; }
+.bs-table th { text-align: left; font-size: 0.75rem; color: #8c8c8c; padding: 8px 8px; }
+.bs-table td { font-size: 0.875rem; color: #262626; padding: 8px 8px; }
+.bs-table tbody tr td:first-child { font-weight: 700; }
+.bs-extra { display: flex; flex-direction: column; gap: 8px; }
+.extra-row { display: flex; justify-content: space-between; }
+
+.qa-header { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #f0f0f0; }
+.qa-bolt { color: #faad14; }
+.qa-title { margin: 0; font-size: 1rem; font-weight: 700; }
+
+.qa-list { display: flex; flex-direction: column; gap: 6px; padding: 12px 8px 12px 8px; flex: 1; overflow: auto; }
+.qa-item { display: flex; align-items: center; gap: 10px; padding: 8px 8px; border-radius: 6px; cursor: pointer; }
+.qa-item:hover { background: #fafafa; color: #1677ff; }
+.qa-item span { font-size: 0.875rem; }
+
+@media (max-width: 1200px) {
+  .content-split { 
+    flex-direction: column; 
+    overflow: visible;
+  }
+  .right-qa { 
+    width: 100%; 
+    flex: 0 0 auto; 
+  }
+  
+  .member-dashboard {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  
+  .left-stack {
+    overflow: visible;
+  }
+  
+  .left-80 {
+    overflow: visible;
+  }
+  
+  .dashboard-tabs {
+    height: auto;
+    min-height: 0;
+  }
+  
+  .dashboard-tabs .ant-tabs-content-holder {
+    overflow: visible;
+  }
+}
+
+.md-header { display: flex; gap: 12px; }
+.md-divider { height: 1px; background: #f0f0f0; }
+.pad-16 { padding: 16px; }
+.pad-8 { padding: 8px; }
+
+
+/* Mobile layout for filters and tabs */
+@media (max-width: 768px) {
+  .md-filters {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 12px 12px 12px;
+  }
+
+  /* Make filter selects full width on mobile */
+  .filter-select {
+    width: 100% !important;
+  }
+
+  /* Bring bottom radii back on mobile */
+  .attach-bottom .ant-select-selector {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+  }
+
+  /* Replace tab bar with dropdown */
+  .dashboard-tabs { display: none; }
+
+  .md-tabs-mobile { padding: 16px 12px 12px 12px; }
+  .md-tabs-mobile .ant-select { margin-top: 0; }
+  .md-tabs-mobile + .ant-card-body, .left-80 .ant-card-body { padding-top: 0; }
+  .md-tabs-mobile .ant-select { width: 100%; }
+}
+

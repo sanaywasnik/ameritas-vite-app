@@ -1,0 +1,112 @@
+.App {
+  min-height: 100vh;
+  text-align: left;
+}
+
+/* Global Typography Styles based on Design System */
+h1 {
+  font-size: 2.5rem; /* 40px */
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 1.125rem; /* 18px */
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+p, body {
+  font-size: 1rem; /* 16px */
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* Responsive Typography - 20% reduction for medium breakpoints */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* 32px - 20% of 40px */
+  }
+  
+  h2 {
+    font-size: 1.6rem; /* 25.6px - 20% of 32px */
+  }
+  
+  h3 {
+    font-size: 1.2rem; /* 19.2px - 20% of 24px */
+  }
+  
+  h4 {
+    font-size: 1rem; /* 16px - 20% of 20px */
+  }
+  
+  h5 {
+    font-size: 0.9rem; /* 14.4px - 20% of 18px */
+  }
+  
+  p, body {
+    font-size: 0.8rem; /* 12.8px - 20% of 16px */
+  }
+}
+
+/* Utility Classes */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.body-text {
+  font-size: 1rem; /* 16px */
+  line-height: 150%;
+}
+
+.body-text-small {
+  font-size: 0.875rem; /* 14px */
+  line-height: 150%;
+}
+
+.graph-subtitle {
+  font-size: 0.75rem; /* 12px */
+  line-height: 150%;
+}
+
+.hyperlink {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.text-button {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.global-nav {
+  font-size: 0.625rem; /* 10px */
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+

@@ -1,0 +1,115 @@
+.member-search-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.main-layout {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  flex: 1;
+  overflow: hidden;
+  margin-left: 72px; /* account for left rail */
+  min-width: 0; /* Prevent flex children from expanding beyond container */
+}
+
+.left-panel {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* keep panel fixed, inner content handles scroll */
+  min-width: 0; /* Critical for flex children with overflow content */
+  max-width: 100%;
+}
+
+.dashboard-wrapper {
+  margin-top: 12px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  min-width: 0; /* Critical for preventing overflow expansion */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Custom scrollbar styling */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-panel::-webkit-scrollbar-track,
+.right-panel::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 3px;
+}
+
+.left-panel::-webkit-scrollbar-thumb:hover,
+.right-panel::-webkit-scrollbar-thumb:hover {
+  background: #8c8c8c;
+}
+
+/* Tablet/Mobile View (≤1200px) */
+@media (max-width: 1200px) {
+  .member-search-layout {
+    min-height: 100vh;
+    overflow: visible;
+    background-color: #f5f5f5;
+  }
+  
+  .main-layout {
+    flex-direction: column;
+    overflow: visible;
+    min-height: calc(100vh - 64px); /* Account for header height */
+    margin-left: 0 !important; /* Remove left rail margin */
+    background-color: #f5f5f5;
+  }
+
+  .left-panel {
+    width: 100%;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+
+  .right-panel {
+    flex: 1;
+    overflow: visible;
+    min-height: 0;
+  }
+
+  .dashboard-wrapper {
+    overflow: visible;
+    flex: 1;
+    min-height: 400px; /* Ensure minimum height for dashboard */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .left-panel {
+    width: 100%;
+  }
+}

@@ -1,0 +1,226 @@
+/* FAB Button */
+.fab-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 264px;
+  height: 40px;
+  background: #1677ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0 16px;
+}
+
+.fab-button.expanded {
+  animation: buttonToHeader 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes buttonToHeader {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.fab-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(22, 119, 255, 0.4);
+}
+
+/* Remove the old expanded state since we have animation now */
+
+.fab-sparkles {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.fab-chevron {
+  color: white;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.fab-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: left;
+  margin-left: 8px;
+}
+
+.fab-button.expanded .fab-chevron {
+  transform: rotate(180deg);
+}
+
+/* Mobile FAB - Icon Only */
+.fab-button.mobile {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  justify-content: center;
+  padding: 0;
+}
+
+.fab-button.mobile .fab-sparkles {
+  font-size: 20px;
+}
+
+/* Overlay Panel */
+.fab-overlay {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 264px;
+  max-height: 70vh;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: smartExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes smartExpand {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(0);
+    border-radius: 8px;
+  }
+  30% {
+    opacity: 0.8;
+    transform: scale(1.02) translateY(-2px);
+    border-radius: 8px;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    border-radius: 8px;
+  }
+}
+
+.fab-overlay-header {
+  background: #1677ff;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  animation: headerSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+@keyframes headerSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fab-overlay-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.fab-overlay-sparkles {
+  font-size: 18px;
+}
+
+.fab-overlay-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.fab-overlay-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fab-overlay-content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(70vh - 60px);
+  animation: contentSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+@keyframes contentSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Overlay Quick Actions Styles */
+.fab-overlay .quick-actions-card {
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  height: auto;
+}
+
+.fab-overlay .qa-header {
+  display: none; /* Hide the original header since we have overlay header */
+}
+
+.fab-overlay .qa-divider {
+  display: none; /* Hide the original divider */
+}
+
+.fab-overlay .qa-content {
+  padding: 8px;
+}
+
+.fab-overlay .action-item {
+  padding: 8px 12px;
+  margin: 2px 0;
+  border-radius: 6px;
+}
+
+.fab-overlay .action-item:hover {
+  background-color: #f5f5f5;
+}
+
+.fab-overlay .action-icon {
+  font-size: 14px;
+}
+
+.fab-overlay .action-label {
+  font-size: 0.8rem;
+}

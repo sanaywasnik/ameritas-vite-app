@@ -1,0 +1,45 @@
+.left-rail {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 72px;
+  bottom: 0;
+  background: #ffffff;
+  border-right: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  gap: 24px;
+  z-index: 900;
+}
+
+.rail-item {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #262626;
+}
+
+.rail-item:hover { color: #1890ff; }
+
+.rail-icon { font-size: 16px; }
+.rail-label { font-size: 0.875rem; }
+
+@media (max-width: 1200px) {
+  .left-rail { display: none; }
+}
+
+.household-popover .ant-popover-inner { padding: 0; border-radius: 8px; }
+.household-card { width: 260px; padding: 12px; }
+.household-title { font-weight: 700; margin-bottom: 8px; }
+.household-subtitle { font-weight: 700; margin: 12px 0 6px; }
+.household-table { width: 100%; border-collapse: collapse; }
+.household-table th, .household-table td { text-align: left; padding: 6px 4px; font-size: 0.875rem; }
+.household-table thead th { color: #8c8c8c; font-size: 0.75rem; }
+
+

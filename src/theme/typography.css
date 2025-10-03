@@ -1,0 +1,31 @@
+/* Design System Typography Classes (from textStyles.json)
+   Use Lato 400/700, headings 125% line-height, body 150% */
+
+/* Headings */
+.ds-h1 { font-size: 2.5rem !important; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.ds-h1-bold { font-size: 2.5rem !important; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.ds-h2 { font-size: 2rem !important; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.ds-h2-bold { font-size: 2rem !important; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.ds-h3 { font-size: 1.5rem !important; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.ds-h3-bold { font-size: 1.5rem !important; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.ds-h4 { font-size: 1.25rem !important; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.ds-h4-bold { font-size: 1.25rem !important; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.ds-h5 { font-size: 1.125rem !important; font-weight: 400; line-height: 1.25; letter-spacing: 0; }
+.ds-h5-bold { font-size: 1.125rem !important; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+
+/* Body */
+.ds-body { font-size: 1rem !important; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.ds-body-bold { font-size: 1rem !important; font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+.ds-body-sm { font-size: 0.875rem !important; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.ds-body-sm-bold { font-size: 0.875rem !important; font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+
+/* Graph Subtitle */
+.ds-graph-subtitle { font-size: 0.75rem !important; font-weight: 400; line-height: 1.5; letter-spacing: 0; color: #8c8c8c; }
+.ds-graph-subtitle-bold { font-size: 0.75rem !important; font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+
+/* Navigation & Links */
+.ds-global-nav { font-size: 0.625rem !important; font-weight: 700; line-height: 1.5; letter-spacing: 0.01em; text-transform: none; }
+.ds-hyperlink { font-size: 0.875rem !important; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.ds-text-button { font-size: 0.875rem !important; font-weight: 700; line-height: 1.5; letter-spacing: 0.01em; text-transform: uppercase; }
+
+
