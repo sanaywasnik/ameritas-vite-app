@@ -60,7 +60,7 @@ const QuickActions = ({ member, activePersonKey, disabled = true, onActionOpen, 
   return (
     <Card className="quick-actions-card" bordered={false} bodyStyle={{ padding: 0 }}>
       <div className="quick-actions-header qa-header">
-        <Icons.Bolt className="qa-bolt" />
+        <Icons.Bolt className="qa-bolt" color="#f59e0b" />
         <h3 className="quick-actions-title">Quick Actions</h3>
       </div>
       <div className="qa-divider" />

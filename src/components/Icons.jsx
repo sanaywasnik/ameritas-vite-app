@@ -32,8 +32,16 @@ import UserPenIcon from '../assets/icons/regular/user-pen-regular-full.svg?react
 import UsersGearIcon from '../assets/icons/regular/users-gear-regular-full.svg?react';
 
 // Wrapper component to standardize icon rendering
-const Icon = ({ component: Component, className, style, ...props }) => {
-  return <Component className={className} style={style} {...props} />;
+const Icon = ({ component: Component, className, style, width, height, color, ...props }) => {
+  const mergedStyle = {
+    width: width || '1em',
+    height: height || '1em',
+    color: color || 'currentColor',
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    ...style,
+  };
+  return <Component className={className} style={mergedStyle} {...props} />;
 };
 
 // Export individual icon components

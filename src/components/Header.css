@@ -183,10 +183,7 @@
     box-shadow: none !important;
   }
   
-  .hamburger-icon {
-    font-size: 18px;
-    color: #262626;
-  }
+  .hamburger-icon { width: 18px; height: 18px; color: #262626; }
   
   .persona-select {
     display: none; /* Hide persona selector from header in tablet */
