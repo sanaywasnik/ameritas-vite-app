@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, DatePicker, message } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 import './UpdateDependentStatusModal.css';
 
@@ -49,7 +51,7 @@ const UpdateDependentStatusModal = ({ open, onClose, member, activePersonKey }) 
     >
       <Form form={form} layout="vertical" requiredMark={false} onFinish={handleFinish}>
         <Form.Item label="Member Details" name="memberDetails">
-          <Select placeholder="Select member" suffixIcon={<Icons.ChevronDown />}>
+          <Select placeholder="Select member" suffixIcon={<FontAwesomeIcon icon={faChevronDown} />}>
             {memberOptions.map(option => (
               <Option key={option.value} value={option.value}>
                 {option.label}
@@ -61,20 +63,20 @@ const UpdateDependentStatusModal = ({ open, onClose, member, activePersonKey }) 
         <Form.Item label="Date of Birth" name="dateOfBirth">
           <DatePicker 
             placeholder="Select date" 
-            suffixIcon={<Icons.Calendar />}
+            suffixIcon={<FontAwesomeIcon icon={faCalendar} />}
             style={{ width: '100%' }}
           />
         </Form.Item>
 
         <Form.Item label="Share Information" name="shareInformation">
-          <Select placeholder="Select option" suffixIcon={<Icons.ChevronDown />}>
+          <Select placeholder="Select option" suffixIcon={<FontAwesomeIcon icon={faChevronDown} />}>
             <Option value="yes">Yes</Option>
             <Option value="no">No</Option>
           </Select>
         </Form.Item>
 
         <Form.Item label="Student" name="student">
-          <Select placeholder="Select option" suffixIcon={<Icons.ChevronDown />}>
+          <Select placeholder="Select option" suffixIcon={<FontAwesomeIcon icon={faChevronDown} />}>
             <Option value="yes">Yes</Option>
             <Option value="no">No</Option>
           </Select>

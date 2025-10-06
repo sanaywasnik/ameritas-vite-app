@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Checkbox, message } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import './SendPlanDocModal.css';
 
@@ -33,7 +35,7 @@ const SendPlanDocModal = ({ open, onClose, member, activePersonKey }) => {
         <Form.Item label="Product" name="product">
           <Select 
             placeholder="Select product" 
-            suffixIcon={<Icons.ChevronDown />}
+            suffixIcon={<FontAwesomeIcon icon={faChevronDown} />}
             defaultValue="dental"
           >
             <Option value="dental">Dental</Option>
