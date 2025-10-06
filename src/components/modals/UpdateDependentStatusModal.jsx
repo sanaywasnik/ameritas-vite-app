@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, DatePicker, message } from 'antd';
 
-import { Icons } from '../Icons';
 import './UpdateDependentStatusModal.css';
 
 const { Option } = Select;

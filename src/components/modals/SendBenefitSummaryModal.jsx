@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Input, message } from 'antd';
 
-import { Icons } from '../Icons';
 import './SendBenefitSummaryModal.css';
 
 const { Option } = Select;

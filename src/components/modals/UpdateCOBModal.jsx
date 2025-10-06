@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Input, DatePicker, message } from 'antd';
 
-import { Icons } from '../Icons';
 import './UpdateCOBModal.css';
 
 const { Option } = Select;

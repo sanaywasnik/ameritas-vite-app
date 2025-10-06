@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Input, Table, message } from 'antd';
 
-import { Icons } from '../Icons';
 import './ClaimDetailsModal.css';
 
 const { TextArea } = Input;

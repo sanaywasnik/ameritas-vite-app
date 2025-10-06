@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, Checkbox, message } from 'antd';
 
-import { Icons } from '../Icons';
 import './RequestIDCardModal.css';
 
 const { Option } = Select;
