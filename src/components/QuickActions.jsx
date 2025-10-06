@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Card, Space } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+// Using FontAwesome Pro via CDN
 import './QuickActions.css';
 import UpdatePersonalInfoModal from './modals/UpdatePersonalInfoModal.jsx';
 import UpdateCOBModal from './modals/UpdateCOBModal.jsx';
@@ -27,17 +26,17 @@ const QuickActions = ({ member, activePersonKey, disabled = true, onActionOpen, 
   const [openTPA, setOpenTPA] = useState(false);
   const [openProcedureCode, setOpenProcedureCode] = useState(false);
   const actions = [
-    { key: 'update-info', label: 'Update Personal Information', icon: <FontAwesomeIcon icon={byPrefixAndName.far['user-pen']} /> },
-    { key: 'update-cob', label: 'Update COB', icon: <FontAwesomeIcon icon={byPrefixAndName.far['user-gear']} /> },
-    { key: 'update-dependent', label: 'Update Dependent Status', icon: <FontAwesomeIcon icon={byPrefixAndName.far['users-gear']} /> },
-    { key: 'find-provider', label: 'Find Provider', icon: <FontAwesomeIcon icon={byPrefixAndName.far['magnifying-glass-location']} /> },
-    { key: 'request-id', label: 'Request ID Card', icon: <FontAwesomeIcon icon={byPrefixAndName.far['id-card-clip']} /> },
-    { key: 'procedure-lookup', label: 'Procedure Code Lookup', icon: <FontAwesomeIcon icon={byPrefixAndName.far['suitcase-medical']} /> },
-    { key: 'benefit-summary', label: 'Send Benefit Summary', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-medical']} /> },
-    { key: 'patient-details', label: 'Send Patient Details', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-user']} /> },
-    { key: 'send-document', label: 'Send Document', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file']} /> },
-    { key: 'plan-doc', label: 'Send Plan Doc', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-lines']} /> },
-    { key: 'tpa', label: 'TPA', icon: <FontAwesomeIcon icon={byPrefixAndName.far['building-memo']} /> },
+    { key: 'update-info', label: 'Update Personal Information', icon: <i className="far fa-user-pen"></i> },
+    { key: 'update-cob', label: 'Update COB', icon: <i className="far fa-user-gear"></i> },
+    { key: 'update-dependent', label: 'Update Dependent Status', icon: <i className="far fa-users-gear"></i> },
+    { key: 'find-provider', label: 'Find Provider', icon: <i className="far fa-magnifying-glass-location"></i> },
+    { key: 'request-id', label: 'Request ID Card', icon: <i className="far fa-id-card-clip"></i> },
+    { key: 'procedure-lookup', label: 'Procedure Code Lookup', icon: <i className="far fa-suitcase-medical"></i> },
+    { key: 'benefit-summary', label: 'Send Benefit Summary', icon: <i className="far fa-file-medical"></i> },
+    { key: 'patient-details', label: 'Send Patient Details', icon: <i className="far fa-file-user"></i> },
+    { key: 'send-document', label: 'Send Document', icon: <i className="far fa-file"></i> },
+    { key: 'plan-doc', label: 'Send Plan Doc', icon: <i className="far fa-file-lines"></i> },
+    { key: 'tpa', label: 'TPA', icon: <i className="far fa-building-memo"></i> },
   ];
 
   const handleActionClick = (key) => {
@@ -61,7 +60,7 @@ const QuickActions = ({ member, activePersonKey, disabled = true, onActionOpen, 
   return (
     <Card className="quick-actions-card" bordered={false} bodyStyle={{ padding: 0 }}>
       <div className="quick-actions-header qa-header">
-        <FontAwesomeIcon icon={byPrefixAndName.fas['bolt']} className="qa-bolt" />
+        <i className="fas fa-bolt qa-bolt"></i>
         <h3 className="quick-actions-title">Quick Actions</h3>
       </div>
       <div className="qa-divider" />

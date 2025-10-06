@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Avatar, Space, Select, Popover, Switch, Button, Modal, Table } from 'antd';
 import { CheckCircleTwoTone } from '@ant-design/icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
+// Using FontAwesome Pro via CDN - no React components needed
 import './Header.css';
 import logo from '../assets/ameritas_logo.png';
 import aiNextLogo from '../assets/AINext_logo.png';
@@ -32,7 +31,7 @@ const Header = () => {
           className="hamburger-menu"
           onClick={() => setHamburgerOpen(!hamburgerOpen)}
           aria-label="Menu"
-          icon={<FontAwesomeIcon icon={byPrefixAndName.fas['bars']} className="hamburger-icon" />}
+          icon={<i className="fas fa-bars hamburger-icon"></i>}
         />
         <img src={logo} alt="Ameritas" className="ameritas-logo" />
         <img src={aiNextLogo} alt="AI Next" className="ai-next-logo" />
@@ -51,7 +50,7 @@ const Header = () => {
             defaultValue="subscriber-member"
             size="middle"
             style={{ minWidth: 200 }}
-            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[personaOpen ? 'chevron-up' : 'chevron-down']} />}
+            suffixIcon={<i className={`fas fa-chevron-${personaOpen ? 'up' : 'down'}`}></i>}
             onDropdownVisibleChange={(open) => setPersonaOpen(open)}
           />
 
@@ -72,16 +71,16 @@ const Header = () => {
                     </div>
                   </div>
                   <button className="popover-close" onClick={() => setOpen(false)} aria-label="Close profile popover">
-                    <FontAwesomeIcon icon={byPrefixAndName.fas['xmark']} />
+                    <i className="fas fa-xmark"></i>
                   </button>
                 </div>
                 <div className="profile-divider" />
                 <div className="profile-bottom">
                   <div className="profile-status-left">
                     {isOnline ? (
-                      <FontAwesomeIcon icon={byPrefixAndName.fas['circle-check']} style={{ color: '#52c41a', fontSize: 18 }} />
+                      <i className="fas fa-circle-check" style={{ color: '#52c41a', fontSize: 18 }}></i>
                     ) : (
-                      <FontAwesomeIcon icon={byPrefixAndName.fas['circle-xmark']} style={{ color: '#bfbfbf', fontSize: 18 }} />
+                      <i className="fas fa-circle-xmark" style={{ color: '#bfbfbf', fontSize: 18 }}></i>
                     )}
                     <span className="ds-body-sm" style={{ marginLeft: 8 }}>{isOnline ? 'Online' : 'Offline'}</span>
                   </div>
@@ -109,23 +108,23 @@ const Header = () => {
                 onClick={() => setHamburgerOpen(false)}
                 aria-label="Close menu"
               >
-                <FontAwesomeIcon icon={byPrefixAndName.fas['xmark']} />
+                <i className="fas fa-xmark"></i>
               </button>
             </div>
             
             <div className="hamburger-actions">
               <button className="hamburger-action-item">
-                <FontAwesomeIcon icon={byPrefixAndName.fas['phone']} />
+                <i className="fas fa-phone"></i>
                 <span>Call</span>
               </button>
               
               <button className="hamburger-action-item">
-                <FontAwesomeIcon icon={byPrefixAndName.far['envelope']} />
+                <i className="far fa-envelope"></i>
                 <span>Email</span>
               </button>
               
               <button className="hamburger-action-item" onClick={() => setMembersOpen(true)}>
-                <FontAwesomeIcon icon={byPrefixAndName.fas['users']} />
+                <i className="fas fa-users"></i>
                 <span>Members</span>
               </button>
               
