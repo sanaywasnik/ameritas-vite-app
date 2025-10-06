@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Layout, Avatar, Space, Select, Popover, Switch, Button, Modal, Table } from 'antd';
 import { CheckCircleTwoTone } from '@ant-design/icons';
-import { Icons } from './Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
 import './Header.css';
 import logo from '../assets/ameritas_logo.png';
 import aiNextLogo from '../assets/AINext_logo.png';
@@ -31,7 +32,7 @@ const Header = () => {
           className="hamburger-menu"
           onClick={() => setHamburgerOpen(!hamburgerOpen)}
           aria-label="Menu"
-          icon={<Icons.Bars className="hamburger-icon" />}
+          icon={<FontAwesomeIcon icon={byPrefixAndName.fas['bars']} className="hamburger-icon" />}
         />
         <img src={logo} alt="Ameritas" className="ameritas-logo" />
         <img src={aiNextLogo} alt="AI Next" className="ai-next-logo" />
@@ -50,7 +51,7 @@ const Header = () => {
             defaultValue="subscriber-member"
             size="middle"
             style={{ minWidth: 200 }}
-            suffixIcon={personaOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
+            suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[personaOpen ? 'chevron-up' : 'chevron-down']} />}
             onDropdownVisibleChange={(open) => setPersonaOpen(open)}
           />
 
@@ -71,16 +72,16 @@ const Header = () => {
                     </div>
                   </div>
                   <button className="popover-close" onClick={() => setOpen(false)} aria-label="Close profile popover">
-                    <Icons.Xmark />
+                    <FontAwesomeIcon icon={byPrefixAndName.fas['xmark']} />
                   </button>
                 </div>
                 <div className="profile-divider" />
                 <div className="profile-bottom">
                   <div className="profile-status-left">
                     {isOnline ? (
-                      <Icons.CircleCheck style={{ color: '#52c41a', fontSize: 18 }} />
+                      <FontAwesomeIcon icon={byPrefixAndName.fas['circle-check']} style={{ color: '#52c41a', fontSize: 18 }} />
                     ) : (
-                      <Icons.CircleXmark style={{ color: '#bfbfbf', fontSize: 18 }} />
+                      <FontAwesomeIcon icon={byPrefixAndName.fas['circle-xmark']} style={{ color: '#bfbfbf', fontSize: 18 }} />
                     )}
                     <span className="ds-body-sm" style={{ marginLeft: 8 }}>{isOnline ? 'Online' : 'Offline'}</span>
                   </div>
@@ -108,23 +109,23 @@ const Header = () => {
                 onClick={() => setHamburgerOpen(false)}
                 aria-label="Close menu"
               >
-                <Icons.Xmark />
+                <FontAwesomeIcon icon={byPrefixAndName.fas['xmark']} />
               </button>
             </div>
             
             <div className="hamburger-actions">
               <button className="hamburger-action-item">
-                <Icons.Phone />
-                <span>Call</span>
+                <FontAwesomeIcon icon={byPrefixAndName.fas['messages']} />
+                <span>Chat</span>
               </button>
               
               <button className="hamburger-action-item">
-                <Icons.Envelope />
+                <FontAwesomeIcon icon={byPrefixAndName.fas['envelope']} />
                 <span>Email</span>
               </button>
               
               <button className="hamburger-action-item" onClick={() => setMembersOpen(true)}>
-                <Icons.Users />
+                <FontAwesomeIcon icon={byPrefixAndName.fas['users']} />
                 <span>Members</span>
               </button>
               
@@ -135,8 +136,6 @@ const Header = () => {
                   defaultValue="subscriber-member"
                   size="small"
                   style={{ minWidth: 180 }}
-                  suffixIcon={personaOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-                  onOpenChange={(open) => setPersonaOpen(open)}
                 />
               </div>
             </div>
