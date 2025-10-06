@@ -114,8 +114,8 @@ const Header = () => {
             
             <div className="hamburger-actions">
               <button className="hamburger-action-item">
-                <i className="fas fa-phone"></i>
-                <span>Call</span>
+                <i className="fas fa-messages"></i>
+                <span>Chat</span>
               </button>
               
               <button className="hamburger-action-item">
