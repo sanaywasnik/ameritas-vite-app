@@ -7,7 +7,8 @@ import PatientHistory from './PatientHistory';
 import BillingPayment from './BillingPayment';
 import CoverageHistory from './CoverageHistory';
 import CaseHistory from './CaseHistory';
-import { Icons } from './Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
 import './MemberDashboard.css';
 
 const { Option } = Select;
@@ -242,8 +243,8 @@ const MemberDashboard = ({ member, activePersonKey }) => {
           <div className="md-filters">
             <Select
               className="filter-select attach-bottom"
-              suffixIcon={coverageOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onOpenChange={(o) => setCoverageOpen(o)}
+              suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[coverageOpen ? 'chevron-up' : 'chevron-down']} />}
+              onDropdownVisibleChange={(o) => setCoverageOpen(o)}
               style={{ width: 240 }}
               value={selectedCoverage}
               placeholder="Coverage type"
@@ -262,8 +263,8 @@ const MemberDashboard = ({ member, activePersonKey }) => {
             </Select>
             <Select
               className="filter-select attach-bottom"
-              suffixIcon={memberOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onOpenChange={(o) => setMemberOpen(o)}
+              suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[memberOpen ? 'chevron-up' : 'chevron-down']} />}
+              onDropdownVisibleChange={(o) => setMemberOpen(o)}
               style={{ width: 240 }}
               value={selectedPerson}
               placeholder="Member"

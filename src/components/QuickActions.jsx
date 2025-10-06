@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Card, Space } from 'antd';
-import { Icons } from './Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
 import './QuickActions.css';
 import UpdatePersonalInfoModal from './modals/UpdatePersonalInfoModal.jsx';
 import UpdateCOBModal from './modals/UpdateCOBModal.jsx';
@@ -26,17 +27,17 @@ const QuickActions = ({ member, activePersonKey, disabled = true, onActionOpen, 
   const [openTPA, setOpenTPA] = useState(false);
   const [openProcedureCode, setOpenProcedureCode] = useState(false);
   const actions = [
-    { key: 'update-info', label: 'Update Personal Information', icon: <Icons.UserPen /> },
-    { key: 'update-cob', label: 'Update COB', icon: <Icons.UserGear /> },
-    { key: 'update-dependent', label: 'Update Dependent Status', icon: <Icons.UsersGear /> },
-    { key: 'find-provider', label: 'Find Provider', icon: <Icons.MagnifyingGlassLocation /> },
-    { key: 'request-id', label: 'Request ID Card', icon: <Icons.IdCardClip /> },
-    { key: 'procedure-lookup', label: 'Procedure Code Lookup', icon: <Icons.SuitcaseMedical /> },
-    { key: 'benefit-summary', label: 'Send Benefit Summary', icon: <Icons.FileMedical /> },
-    { key: 'patient-details', label: 'Send Patient Details', icon: <Icons.FileUser /> },
-    { key: 'send-document', label: 'Send Document', icon: <Icons.File /> },
-    { key: 'plan-doc', label: 'Send Plan Doc', icon: <Icons.FileLines /> },
-    { key: 'tpa', label: 'TPA', icon: <Icons.BuildingMemo /> },
+    { key: 'update-info', label: 'Update Personal Information', icon: <FontAwesomeIcon icon={byPrefixAndName.far['user-pen']} /> },
+    { key: 'update-cob', label: 'Update COB', icon: <FontAwesomeIcon icon={byPrefixAndName.far['user-gear']} /> },
+    { key: 'update-dependent', label: 'Update Dependent Status', icon: <FontAwesomeIcon icon={byPrefixAndName.far['users-gear']} /> },
+    { key: 'find-provider', label: 'Find Provider', icon: <FontAwesomeIcon icon={byPrefixAndName.far['magnifying-glass-location']} /> },
+    { key: 'request-id', label: 'Request ID Card', icon: <FontAwesomeIcon icon={byPrefixAndName.far['id-card-clip']} /> },
+    { key: 'procedure-lookup', label: 'Procedure Code Lookup', icon: <FontAwesomeIcon icon={byPrefixAndName.far['suitcase-medical']} /> },
+    { key: 'benefit-summary', label: 'Send Benefit Summary', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-medical']} /> },
+    { key: 'patient-details', label: 'Send Patient Details', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-user']} /> },
+    { key: 'send-document', label: 'Send Document', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file']} /> },
+    { key: 'plan-doc', label: 'Send Plan Doc', icon: <FontAwesomeIcon icon={byPrefixAndName.far['file-lines']} /> },
+    { key: 'tpa', label: 'TPA', icon: <FontAwesomeIcon icon={byPrefixAndName.far['building-memo']} /> },
   ];
 
   const handleActionClick = (key) => {
@@ -58,9 +59,9 @@ const QuickActions = ({ member, activePersonKey, disabled = true, onActionOpen, 
   const maybePortal = (node) => (usePortal ? createPortal(node, document.body) : node);
 
   return (
-    <Card className="quick-actions-card" variant="outlined" styles={{ body: { padding: 0 } }}>
+    <Card className="quick-actions-card" bordered={false} bodyStyle={{ padding: 0 }}>
       <div className="quick-actions-header qa-header">
-        <Icons.Bolt className="qa-bolt" color="#f59e0b" />
+        <FontAwesomeIcon icon={byPrefixAndName.fas['bolt']} className="qa-bolt" />
         <h3 className="quick-actions-title">Quick Actions</h3>
       </div>
       <div className="qa-divider" />

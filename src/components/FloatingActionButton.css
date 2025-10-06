@@ -17,11 +17,6 @@
   padding: 0 16px;
 }
 
-/* Force all SVGs in the FAB button to render white */
-.fab-button :where(svg) { color: #fff; }
-/* Some SVGs have hardcoded fills/strokes. Force override to white */
-.fab-button :where(svg) * { fill: #fff !important; stroke: #fff !important; }
-
 .fab-button.expanded {
   animation: buttonToHeader 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
@@ -48,7 +43,11 @@
 
 /* Remove the old expanded state since we have animation now */
 
-.fab-sparkles { color: #fff; width: 16px; height: 16px; transition: all 0.3s ease; }
+.fab-sparkles {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
 
 .fab-chevron {
   color: white;
@@ -130,10 +129,6 @@
   animation: headerSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
 }
 
-/* Force all SVGs in the overlay header to render white */
-.fab-overlay-header :where(svg) { color: #fff; }
-.fab-overlay-header :where(svg) * { fill: #fff !important; stroke: #fff !important; }
-
 @keyframes headerSlideIn {
   0% {
     opacity: 0;
@@ -153,7 +148,9 @@
   font-size: 16px;
 }
 
-.fab-overlay-sparkles { color: #fff; width: 18px; height: 18px; }
+.fab-overlay-sparkles {
+  font-size: 18px;
+}
 
 .fab-overlay-close {
   background: none;

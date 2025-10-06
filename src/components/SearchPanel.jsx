@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Radio, Select, Input, Button, Space, Divider, DatePicker, Row, Col } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-import { Icons } from './Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
 import './SearchPanel.css';
 
 const { Option } = Select;
@@ -78,8 +79,8 @@ const SearchPanel = ({ onSearch, onCreateCase, onClear, coverage }) => {
               onChange={setSearchBy}
               style={{ width: '100%' }}
               className="search-select"
-              suffixIcon={isSearchByOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
-              onOpenChange={(open) => setIsSearchByOpen(open)}
+              suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.fas[isSearchByOpen ? 'chevron-up' : 'chevron-down']} />}
+              onDropdownVisibleChange={(open) => setIsSearchByOpen(open)}
             >
               <Option value="subscriberId">Subscriber ID</Option>
               <Option value="nameDob">First Name + Last Name + DOB</Option>
@@ -129,7 +130,7 @@ const SearchPanel = ({ onSearch, onCreateCase, onClear, coverage }) => {
                   value={dob}
                   onChange={setDob}
                   format="MM/DD/YYYY"
-                  suffixIcon={<Icons.Calendar />}
+                  suffixIcon={<FontAwesomeIcon icon={byPrefixAndName.far['calendar']} />}
                 />
               </div>
             </>
@@ -161,7 +162,7 @@ const SearchPanel = ({ onSearch, onCreateCase, onClear, coverage }) => {
 
           <Button
             type="primary"
-            icon={<Icons.MagnifyingGlass />}
+            icon={<FontAwesomeIcon icon={byPrefixAndName.fas['magnifying-glass']} />}
             block
             onClick={handleSearch}
           >

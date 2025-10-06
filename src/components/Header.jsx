@@ -115,12 +115,12 @@ const Header = () => {
             
             <div className="hamburger-actions">
               <button className="hamburger-action-item">
-                <FontAwesomeIcon icon={byPrefixAndName.fas['messages']} />
-                <span>Chat</span>
+                <FontAwesomeIcon icon={byPrefixAndName.fas['phone']} />
+                <span>Call</span>
               </button>
               
               <button className="hamburger-action-item">
-                <FontAwesomeIcon icon={byPrefixAndName.fas['envelope']} />
+                <FontAwesomeIcon icon={byPrefixAndName.far['envelope']} />
                 <span>Email</span>
               </button>
               

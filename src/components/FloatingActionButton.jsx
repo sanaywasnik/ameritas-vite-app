@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Icons } from './Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-5d2be8cfb3/icons';
 import QuickActions from './QuickActions';
 import './FloatingActionButton.css';
 
@@ -69,11 +70,17 @@ const FloatingActionButton = ({ member, activePersonKey }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Icons.Sparkles className="fab-sparkles" />
+        <FontAwesomeIcon 
+          icon={byPrefixAndName.fas['sparkles']} 
+          className="fab-sparkles" 
+        />
         {!isMobile && (
           <>
             <span className="fab-text">Quick Actions</span>
-            <Icons.ChevronUp className="fab-chevron" />
+            <FontAwesomeIcon 
+              icon={byPrefixAndName.fas['chevron-up']} 
+              className="fab-chevron" 
+            />
           </>
         )}
       </div>
@@ -86,14 +93,17 @@ const FloatingActionButton = ({ member, activePersonKey }) => {
         >
           <div className="fab-overlay-header">
             <div className="fab-overlay-title">
-              <Icons.Sparkles className="fab-overlay-sparkles" />
+              <FontAwesomeIcon 
+                icon={byPrefixAndName.fas['sparkles']} 
+                className="fab-overlay-sparkles" 
+              />
               <span>Quick Actions</span>
             </div>
             <button 
               className="fab-overlay-close"
               onClick={handleClose}
             >
-              <Icons.Xmark />
+              <FontAwesomeIcon icon={byPrefixAndName.fas['xmark']} />
             </button>
           </div>
           <div className="fab-overlay-content">

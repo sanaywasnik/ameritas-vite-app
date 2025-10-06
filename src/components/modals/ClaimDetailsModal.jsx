@@ -87,7 +87,7 @@ const ClaimDetailsModal = ({ open, onClose, claimId }) => {
       open={open}
       onCancel={onClose}
       footer={null}
-      destroyOnHidden
+      destroyOnClose
       className="claim-details-modal"
       title={<div className="claim-modal-title">Claim Number: {claimId}</div>}
       width={900}

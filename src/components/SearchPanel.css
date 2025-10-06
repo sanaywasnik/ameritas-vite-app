@@ -35,10 +35,10 @@
   font-size: 0.875rem;
 }
 
-.search-icon { width: 18px; height: 18px; color: #1890ff; }
-
-/* Ensure icons inside primary buttons inherit white */
-.ant-btn-primary :where(svg) { color: #fff; fill: currentColor; }
+.search-icon {
+  font-size: 18px;
+  color: #1890ff;
+}
 
 .search-title {
   font-size: 1rem;
@@ -72,8 +72,9 @@
 }
 
 .search-select,
-.search-select .ant-select-selector { font-size: 0.875rem; }
-.search-select .ant-select-arrow svg { width: 14px; height: 14px; }
+.search-select .ant-select-selector {
+  font-size: 0.875rem;
+}
 
 /* Removed custom search button styles to use Ant Design defaults */
 

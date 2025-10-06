@@ -13,7 +13,9 @@
   padding: 12px 16px;
 }
 
-.qa-bolt { width: 18px; height: 18px; color: #f59e0b; }
+.quick-actions-icon {
+  font-size: 18px;
+}
 
 .quick-actions-title {
   font-size: 1rem;
@@ -41,7 +43,14 @@
   background-color: #f5f5f5;
 }
 
-.action-icon { width: 16px; height: 16px; color: #595959; min-width: 16px; display: flex; align-items: center; justify-content: center; }
+.action-icon {
+  font-size: 16px;
+  color: #595959;
+  min-width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .action-label {
   font-size: 0.875rem;
